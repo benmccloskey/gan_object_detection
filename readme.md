@@ -1,6 +1,8 @@
 # Benefits of using blended generative adversarial network images to augment classification model training data sets
 link: https://journals.sagepub.com/doi/full/10.1177/15485129231170225
 
+**yolo_training_support_files** - Folder contains scripts and configuration files for training Yolov4-Tiny
+
 **GAN_Code** - Folder contains the code for the Generative Adversarial Networks used to create deepfakes. 
 Architectures used:
 1. Deep Convolutional GAN (DCGAN)
