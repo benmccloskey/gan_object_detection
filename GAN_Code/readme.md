@@ -1,2 +1,3 @@
--WGAN Code
--DCGAN/CGAN Code
+- Wasserstein GAN (Unconditioned/Conditioned): ./WGAN_CWGAN_Image_Generation.ipynb
+
+- Deep Convolutional Generation Adversarial Network (Uncondition/Conditioned): ./
