@@ -8,6 +8,7 @@ Object detection algorithms have reached nearly superhuman levels within the las
 
 **Blended_GAN_Object_Detection_Research** - Object detection model training file
 
+./gan_images - example deepfakes
 
 **./yolo_training_support_files** - Folder contains scripts and configuration files for training Yolov4-Tiny
 
