@@ -23,5 +23,5 @@ General Steps of Research:
 
 **Related Towards Data Science Publications**
 1. Deep Learning Model Visualization Tools: Which is best?: https://towardsdatascience.com/deep-learning-model-visualization-tools-which-is-best-83ecbe14fa7
-2. 2. Image Quality Assessment of Deepfakes Produced by Different Generative Adversarial Networks: https://towardsdatascience.com/image-quality-assessment-of-deepfakes-produced-by-different-generative-adversarial-networks-b20513539cc6
+2. Image Quality Assessment of Deepfakes Produced by Different Generative Adversarial Networks: https://towardsdatascience.com/image-quality-assessment-of-deepfakes-produced-by-different-generative-adversarial-networks-b20513539cc6
 3.Convolutional Neural Networks: From An Everyday Understanding to a More Technical Deep Dive: https://towardsdatascience.com/convolutional-neural-networks-from-an-everyday-understanding-to-a-more-technical-deep-dive-83af329e5d89
