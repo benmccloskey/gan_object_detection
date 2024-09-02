@@ -127,4 +127,4 @@ This repository serves as a foundation for further exploration in GANs and their
 
 ## **Acknowledgments**
 
-We thank the community and contributors who have provided valuable feedback during the development of this research. This work is supported by [Funding Agency] under [Grant Number].
+We thank the community and contributors who have provided valuable feedback during the development of this research. This work is supported by the Air Force Institute of Technology.
