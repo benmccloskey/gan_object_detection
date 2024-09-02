@@ -5,7 +5,7 @@ link: https://journals.sagepub.com/doi/full/10.1177/15485129231170225
 
 This repository contains the code and resources supporting the research on the benefits of using blended Generative Adversarial Network (GAN) images to augment training datasets for classification models. The study focuses on how blending GAN-generated images with real data can enhance the accuracy and robustness of classification models, particularly in scenarios with limited real-world data.
 
-The research, published in [Journal of Defense Modeling an Simulation](https://journals.sagepub.com/doi/full/10.1177/15485129231170225), provides evidence that incorporating synthetic images produced by GANs into training datasets leads to better generalization and improved performance of machine learning models. This repository includes all code, data, and supplementary materials used in the research.
+The research, published in [Journal of Defense Modeling an Simulation](https://journals.sagepub.com/doi/full/10.1177/15485129231170225), provides evidence that incorporating synthetic images produced by GANs into training datasets leads to better generalization and improved performance of machine learning models. The biggest impact from this research was the oberservation that blending qualities of deepfake images, where quality is the visual clearness of image, has more of a postivie impact on model performance than using the most clear images. This repository includes all code, data, and supplementary materials used in the research.
 
 
 **Abstract**
