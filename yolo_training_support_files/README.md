@@ -1,4 +1,4 @@
-# YOlov4 Supplementary Files
+# Yolov4 Supplementary Files
 
 **Files used in support of training Yolov4-Tiny**
 
