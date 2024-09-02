@@ -44,7 +44,6 @@ Object detection algorithms have reached nearly superhuman levels within the las
 
 This section includes additional experiments and explorations conducted beyond the scope of the primary paper. These excursions delve into alternative GAN architectures, hyperparameter tuning, and the integration of GAN-generated data with other machine learning models. These supplementary studies provide a broader perspective on the versatility and potential of GANs in various domains.
 
-
 ## **Related Towards Data Science Publications**
 
 1. **[Deep Learning Model Visualization Tools: Which is Best?](https://towardsdatascience.com/deep-learning-model-visualization-tools-which-is-best-83ecbe14fa7)**  
@@ -57,76 +56,6 @@ This section includes additional experiments and explorations conducted beyond t
    A detailed explanation of convolutional neural networks, bridging the gap between a basic understanding and more technical insights.
 
 
-
-## **Setup and Requirements**
-
-To run the notebooks and scripts in this repository, ensure you have the following dependencies installed:
-
-```bash
-pip install -r requirements.txt
-```
-
-Dependencies:
-- TensorFlow
-- Keras
-- NumPy
-- OpenCV
-- Matplotlib
-- PyTorch
-- Other packages as listed in `requirements.txt`
-
-## **Usage Instructions**
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/benmccloskey/gan_object_detection.git
-   cd gan_object_detection
-   ```
-
-2. **Running GAN Models**:
-   - Navigate to the `GAN_Code` directory.
-   - Open the notebooks in JupyterLab or Jupyter Notebook.
-   - Run the cells sequentially to train the GAN models and generate synthetic images.
-
-3. **Training YOLOv4**:
-   - Navigate to the `yolo_training_support_files` directory.
-   - Use the provided scripts and configuration files to train the YOLOv4 model on the generated or real datasets.
-   - Detailed instructions are provided in the respective README.md files within each directory.
-   
-   
-   
-   
-   
-It seems I need to carefully review the files and ensure that the setup instructions and requirements are accurate and comprehensive. I'll take a closer look at all the files provided, considering any dependencies, configurations, or specific setups that might be necessary for running the code, especially within the Google Colab environment.
-
-Please give me a moment to review the content, and I will respond once I'm confident the setup instructions are complete and correct.
-
-Based on the analysis of the code cells from the provided Jupyter notebooks, here's what I found:
-
-### 1. **Darknet Setup in Google Colab**:
-   - The `Blended_GAN_Object_Detect_Research.ipynb` notebook is using Darknet, a framework for YOLO (You Only Look Once) object detection.
-   - **Setup Requirements**:
-     - Clone the Darknet repository.
-     - Modify the Makefile to enable GPU, OpenCV, CUDNN, and CUDNN_HALF.
-     - Build Darknet using `make`.
-   - **Dependencies**:
-     - CUDA and cuDNN need to be correctly set up in the Colab environment for GPU acceleration.
-
-### 2. **Typical Deep Learning Setup**:
-   - The other notebooks (`DCGAN_CGAN_Image_Generation.ipynb` and `WGAN_CWGAN_Image_Generation.ipynb`) seem to involve standard deep learning libraries like TensorFlow, Keras, and PyTorch.
-   - **Setup Requirements**:
-     - Ensure TensorFlow is set to version 2.x (necessary for Colab).
-     - Check for GPU availability and prompt the user to switch to a GPU runtime if one is not detected.
-
-### 3. **General Observations**:
-   - **Imports**: Some notebooks dynamically check if they are running in Google Colab and adjust the environment accordingly. This is important for ensuring that the notebooks run smoothly in Colab.
-   - **Helper Functions**: Functions like `imShow`, `upload`, and `download` are used to facilitate working within the Colab environment.
-
-### Revised Setup Instructions:
-
-Given these findings, here’s how the setup instructions in the README should be updated:
-
----
 
 ## **Setup and Requirements for Google Colab**
 
@@ -191,7 +120,6 @@ This repository is designed to be run in Google Colab, with specific steps requi
      ```python
      files.download('filename')
      ```
-
 
 ## **Future Work**
 
