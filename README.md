@@ -92,6 +92,106 @@ Dependencies:
    - Navigate to the `yolo_training_support_files` directory.
    - Use the provided scripts and configuration files to train the YOLOv4 model on the generated or real datasets.
    - Detailed instructions are provided in the respective README.md files within each directory.
+   
+   
+   
+   
+   
+It seems I need to carefully review the files and ensure that the setup instructions and requirements are accurate and comprehensive. I'll take a closer look at all the files provided, considering any dependencies, configurations, or specific setups that might be necessary for running the code, especially within the Google Colab environment.
+
+Please give me a moment to review the content, and I will respond once I'm confident the setup instructions are complete and correct.
+
+Based on the analysis of the code cells from the provided Jupyter notebooks, here's what I found:
+
+### 1. **Darknet Setup in Google Colab**:
+   - The `Blended_GAN_Object_Detect_Research.ipynb` notebook is using Darknet, a framework for YOLO (You Only Look Once) object detection.
+   - **Setup Requirements**:
+     - Clone the Darknet repository.
+     - Modify the Makefile to enable GPU, OpenCV, CUDNN, and CUDNN_HALF.
+     - Build Darknet using `make`.
+   - **Dependencies**:
+     - CUDA and cuDNN need to be correctly set up in the Colab environment for GPU acceleration.
+
+### 2. **Typical Deep Learning Setup**:
+   - The other notebooks (`DCGAN_CGAN_Image_Generation.ipynb` and `WGAN_CWGAN_Image_Generation.ipynb`) seem to involve standard deep learning libraries like TensorFlow, Keras, and PyTorch.
+   - **Setup Requirements**:
+     - Ensure TensorFlow is set to version 2.x (necessary for Colab).
+     - Check for GPU availability and prompt the user to switch to a GPU runtime if one is not detected.
+
+### 3. **General Observations**:
+   - **Imports**: Some notebooks dynamically check if they are running in Google Colab and adjust the environment accordingly. This is important for ensuring that the notebooks run smoothly in Colab.
+   - **Helper Functions**: Functions like `imShow`, `upload`, and `download` are used to facilitate working within the Colab environment.
+
+### Revised Setup Instructions:
+
+Given these findings, here’s how the setup instructions in the README should be updated:
+
+---
+
+## **Setup and Requirements for Google Colab**
+
+This repository is designed to be run in Google Colab, with specific steps required to set up the environment correctly. Follow these instructions to get started:
+
+### 1. **Open the Notebook in Google Colab**:
+   - Navigate to the repository on GitHub and open the `.ipynb` notebook file you want to run.
+   - Click on the "Open in Colab" button, or manually open the notebook in Google Colab by replacing the `github.com` URL with `colab.research.google.com/github/`.
+
+### 2. **Clone the Darknet Repository (For YOLO Setup)**:
+   - If you're running `Blended_GAN_Object_Detect_Research.ipynb`, you'll need to clone and build Darknet:
+   
+     ```python
+     !git clone https://github.com/AlexeyAB/darknet
+     %cd darknet
+     !sed -i 's/OPENCV=0/OPENCV=1/' Makefile
+     !sed -i 's/GPU=0/GPU=1/' Makefile
+     !sed -i 's/CUDNN=0/CUDNN=1/' Makefile
+     !sed -i 's/CUDNN_HALF=0/CUDNN_HALF=1/' Makefile
+     !make
+     ```
+
+### 3. **Install Required Python Packages**:
+   - Some dependencies might need to be installed. Use the following command to install required packages:
+   
+     ```python
+     !pip install -r requirements.txt
+     ```
+
+   - For TensorFlow 2.x (especially if running in Colab):
+   
+     ```python
+     try:
+         # %tensorflow_version only exists in Colab.
+         %tensorflow_version 2.x
+     except Exception:
+         pass
+     ```
+
+### 4. **Ensure GPU Availability**:
+   - Verify that a GPU is available for running deep learning models. If not, switch to a GPU runtime in Colab:
+   
+     ```python
+     if not tf.config.list_physical_devices('GPU'):
+         print("No GPU was detected. LSTMs and CNNs can be very slow without a GPU.")
+         print("Go to Runtime > Change runtime and select a GPU hardware accelerator.")
+     ```
+
+### 5. **Run the Code**:
+   - Once the environment is set up, run the cells in the notebook sequentially to execute the code and generate results.
+
+### 6. **Upload and Download Files**:
+   - If any files need to be uploaded to the Colab environment, use the `files.upload()` function:
+   
+     ```python
+     from google.colab import files
+     uploaded = files.upload()
+     ```
+
+   - You can download any results or outputs directly from Colab using:
+   
+     ```python
+     files.download('filename')
+     ```
+
 
 ## **Future Work**
 
