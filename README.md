@@ -107,10 +107,10 @@ This repository is designed to be run in Google Colab, with specific steps requi
 
 ### 5. **Run the Code**:
    - Once the environment is set up, run the cells in the notebook sequentially to execute the code and generate results.
-   - For custom datset, us Labelimg for labeling data: https://github.com/HumanSignal/labelImg. Recommending at dataset as two zipped files (train and test) of images with annotations
-   - Store custom datset in a folder in google drive (recommend naming file_yolov4_)
+   - For custom datasets, us Labelimg for labeling data: https://github.com/HumanSignal/labelImg. Recommend loading at dataset as two zipped files (train and test) of images with annotations
+   - Store custom dataset in a folder in google drive (recommend naming file_yolov4_)
    - use _generate_train.py_ and _generate_test.py_ in supporting documents to generate train.txt and test.txt yolov4 configuration files
-   - Train detector model. _Note - weights are saving every 1000 iterations in case notebook crashes_
+   - Train detector model. _Note - weights are saved every 1000 iterations in case notebook crashes_
    - Evaluate Mean Average Precision (mAP) and Intersection-over-Union (IoU)
 
 
