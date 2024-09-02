@@ -65,7 +65,8 @@ This repository is designed to be run in Google Colab, with specific steps requi
    - Navigate to the repository on GitHub and open the `.ipynb` notebook file you want to run.
    - Click on the "Open in Colab" button, or manually open the notebook in Google Colab by replacing the `github.com` URL with `colab.research.google.com/github/`.
 
-### 2. **Clone the Darknet Repository (For YOLO Setup)**:
+### 2. **Clone the Darknet Repository (For YOLO Setup)**:\
+   - Ensure that your notebook is in "GPU" under _Hardware Accelerator_. *_Note: This may require a colab pro account_
    - If you're running `Blended_GAN_Object_Detect_Research.ipynb`, you'll need to clone and build Darknet:
    
      ```python
@@ -106,20 +107,12 @@ This repository is designed to be run in Google Colab, with specific steps requi
 
 ### 5. **Run the Code**:
    - Once the environment is set up, run the cells in the notebook sequentially to execute the code and generate results.
+   - For custom datset, us Labelimg for labeling data: https://github.com/HumanSignal/labelImg. Recommending at dataset as two zipped files (train and test) of images with annotations
+   - Store custom datset in a folder in google drive (recommend naming file_yolov4_)
+   - use _generate_train.py_ and _generate_test.py_ in supporting documents to generate train.txt and test.txt yolov4 configuration files
+   - Train detector model. _Note - weights are saving every 1000 iterations in case notebook crashes_
+   - Evaluate Mean Average Precision (mAP) and Intersection-over-Union (IoU)
 
-### 6. **Upload and Download Files**:
-   - If any files need to be uploaded to the Colab environment, use the `files.upload()` function:
-   
-     ```python
-     from google.colab import files
-     uploaded = files.upload()
-     ```
-
-   - You can download any results or outputs directly from Colab using:
-   
-     ```python
-     files.download('filename')
-     ```
 
 ## **Future Work**
 
